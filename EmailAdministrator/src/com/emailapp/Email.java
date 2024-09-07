@@ -25,7 +25,6 @@ public class Email {
 	}
 	
 	//ask for a department from user
-	
 	private String setDepartment(){
 		System.out.print("Department code\n1: for Sales\n2: for Development\n3: for Accounting\n0: for none\nEnter the Department code:");
 		//to get department no form user
