@@ -49,7 +49,7 @@ public class Email  {
 	 */
 	//ask for a department from user
 	private String setDepartment(){
-		System.out.print("New Worker :"+firstname+"\nDepartment codes\n1: Sales\n2: Development\n3: Accounting\n0: none\nEnter the Department code:");
+		System.out.print("New Worker :"+firstname+"\n\nDepartment codes\n1: Sales\n2: Development\n3: Accounting\n0: none\nEnter the Department code:");
 		//to get department number form user
 		Scanner in=new Scanner(System.in);
 		int departmentChoice=in.nextInt();
