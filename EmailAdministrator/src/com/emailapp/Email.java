@@ -104,7 +104,7 @@ public class Email {
 	public String getPassword() { return password; }
 	
 	
-	//Shoe all information in single method.
+	//Show all information in single method.
 	public String showInfo() {
 		return "DISPLAY NAME :"+firstname+" "+lastname+
 				"\nCOMPANY EMAIL :"+email+
