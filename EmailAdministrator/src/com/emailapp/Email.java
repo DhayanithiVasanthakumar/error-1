@@ -3,6 +3,9 @@ package com.emailapp;
 import java.util.Scanner;
 
 public class Email  {
+	/*
+	*declare variables
+	*/
 	private String firstname;
 	private String lastname;
 	private String password;
@@ -97,7 +100,10 @@ public class Email  {
 	}
 	
 	
-	//get methods in main file.
+	/*
+	 *get methods 
+	 */
+
 	public int getmailBoxCapacity() { return mailcapacity; }
 	
 	public String getAlternativeEmail() { return alteremail; }
