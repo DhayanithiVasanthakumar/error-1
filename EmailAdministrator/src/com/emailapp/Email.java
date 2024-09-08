@@ -6,7 +6,7 @@ public class Email  {
 	private String firstname;
 	private String lastname;
 	private String password;
-	private int defaultPasswordLength=10;
+	private int defaultPasswordLength=8;
 	private String email;
 	private String alteremail;
 	private String department;
