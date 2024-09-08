@@ -91,7 +91,10 @@ public class Email  {
 		this.alteremail=alternateEmail;
 	}
 	
-	
+	//change password
+	public void setPassword(String changedpassword) {
+		this.password=changedpassword;
+	}
 	
 	
 	//get methods in main file.
