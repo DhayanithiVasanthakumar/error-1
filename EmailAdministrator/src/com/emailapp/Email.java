@@ -2,7 +2,7 @@ package com.emailapp;
 
 import java.util.Scanner;
 
-public class Email {
+public class Email  {
 	private String firstname;
 	private String lastname;
 	private String password;
@@ -12,6 +12,8 @@ public class Email {
 	private String department;
 	private int mailcapacity=500;
 	private String companySuffix="sat.com";
+	
+	
 	
 	/*
 	 * constructor
@@ -73,6 +75,8 @@ public class Email {
 	}
 	
 	
+	
+	
 	/*
 	 * set methods
 	 */
@@ -87,12 +91,6 @@ public class Email {
 		this.alteremail=alternateEmail;
 	}
 	
-	
-	
-	//change password
-	public void setPassword(String changedpassword) {
-		this.password=changedpassword;
-	}
 	
 	
 	
