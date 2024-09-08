@@ -26,8 +26,8 @@ public class Email {
 	
 	//ask for a department from user
 	private String setDepartment(){
-		System.out.print("Department code\n1: for Sales\n2: for Development\n3: for Accounting\n0: for none\nEnter the Department code:");
-		//to get department no form user
+		System.out.print("Department code\n1: Sales\n2: Development\n3: Accounting\n0: none\nEnter the Department code:");
+		//to get department number form user
 		Scanner in=new Scanner(System.in);
 		int departmentChoice=in.nextInt();
 		
@@ -42,7 +42,6 @@ public class Email {
 		}
 		else 
 			return "None";
-		
 	}
 	
 	//Generate a random password.
