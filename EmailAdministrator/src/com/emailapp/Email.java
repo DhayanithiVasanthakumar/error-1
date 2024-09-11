@@ -1,9 +1,15 @@
 package com.emailapp;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Email  {
+	File file=new File("C:\\Users\\dhaya\\git\\java-projects\\EmailAdministrator\\src\\com\\emailapp\\information.txt");
 	public Scanner in=new Scanner(System.in);//Scanner class(global)for this class -> it access it in any where in this class
 	/*
 	*declare global variables-> as private for Security issues.
@@ -51,8 +57,6 @@ public class Email  {
 		this.department=this.setDepartment();//department
 		this.password=this.randomPassword(8);//password
 		this.email=this.mailMethod();//email generation
-		
-		
 	}
 	
 	
@@ -181,7 +185,7 @@ public class Email  {
 			System.out.println("Mail box capacity sucessfully updated");
 		}
 		
-	//set alternate mail method
+	//set alternate mail method ->it is user activity so it is in public.
 		public void setAlternateEmail() {
 			System.out.println("Enter alternate mail: ");
 			this.email=in.next();
@@ -189,45 +193,63 @@ public class Email  {
 		}
 	
 	
-	
-	
-	
-	
-	/*
-	 * set methods->these all are user activity so it is in public.
-	 */
-	//set the mail capacity
-//	public void setMailBoxCapacity(int capacity) {
-//		this.mailcapacity=capacity;
-//	}
-	
-	
-	//set the alternative email
-//	public void setAlternativeEmail(String alternateEmail) {
-//		this.alteremail=alternateEmail;
-//	}
-	
-	//change password
-	//public void setPassword(String changedpassword) {
-	//	this.password=changedpassword;
-	//}
-	
-	
-	/*
-	 *get methods 
-	 */
-
-	public int getmailBoxCapacity() { return mailcapacity; }
-	
-	public String getAlternativeEmail() { return alteremail; }
-	
-	public String getPassword() { return password; }
-	
-	
 	//Show all information in single method.
-	public String showInfo() {
-		return "DISPLAY NAME :"+firstname+" "+lastname+
-				"\nCOMPANY EMAIL :"+email+
-				"\nMAILBOX CAPACITY :"+mailcapacity+"mb";
+	public void showInfo() {
+		System.out.println("Name: "+this.firstname+""+this.lastname);
+		System.out.println("Department: "+this.department);
+		System.out.println("Email: "+this.email);
+		System.out.println("Password: "+this.password);
+		System.out.println("Mailbox Capacity: "+this.mailcapacity+"mb");
+		System.out.println("Alternate Email: "+this.alteremail);
 	}
+	
+	//store in file
+	public void storeFile() {
+		//write file
+		try {
+			//bufferWriter use pana whenever run program it erase all data and create new file.
+			//so ithu fix pana append pananum ithu pana data um change aagathu.
+			//FileWriter fwriter=new FileWriter(file,true);
+			
+			FileWriter fwriter=new FileWriter(file,true);
+			BufferedWriter bwriter=new BufferedWriter(fwriter);
+			bwriter.write("\nFirstname: "+this.firstname);
+			bwriter.write("\nLastname: "+this.lastname);
+			bwriter.write("\nEmail: "+this.email);
+			bwriter.write("\nPassword: "+this.password);
+			bwriter.write("\nCapacity: "+this.mailcapacity);
+			bwriter.write("\nAlternate email: "+this.alteremail);
+			bwriter.write(" ");
+			
+			bwriter.flush();
+			bwriter.close();
+			System.out.println("Data Stored...");
+			
+		}catch(Exception e) {
+			System.out.println(e);
+		}
+	}
+	
+	
+	//Reading file method
+			public void readFile() {
+				//read file
+				try {
+					FileReader freader=new FileReader(file);
+					BufferedReader breader=new BufferedReader(freader);
+					//.readLine() return type is String
+					String line=breader.readLine();
+					
+					while(line!=null) {
+						line=breader.readLine();
+						System.out.println(line);
+					}
+					
+					
+					
+				}catch(Exception e) {
+					System.out.println(e);
+				}
+			}
+			
 }
