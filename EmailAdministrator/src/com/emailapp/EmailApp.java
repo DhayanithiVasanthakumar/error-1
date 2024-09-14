@@ -13,6 +13,7 @@ public class EmailApp {
 		System.out.println("Enter lastname: ");
 		String lname = in.next();
 
+		
 		// create obj for Email class
 		Email em = new Email(fname, lname);
 		System.out.println(
