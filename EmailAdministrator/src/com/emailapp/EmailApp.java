@@ -59,6 +59,5 @@ public class EmailApp {
 			System.err.println("enter only numbers");
 
 		}
-
 	}
 }
