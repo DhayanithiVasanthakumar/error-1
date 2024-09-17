@@ -57,7 +57,6 @@ public class EmailApp {
 
 		} catch (InputMismatchException ime) {
 			System.err.println("enter only numbers");
-
 		}
 	}
 }
