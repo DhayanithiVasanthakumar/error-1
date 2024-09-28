@@ -55,8 +55,9 @@ public class EmailApp {
 				}
 			} while (choice != 7);
 
-		} catch (InputMismatchException ime) {
-			System.err.println("enter only numbers");
+		} catch (Exception ime) {
+			ime.printStackTrace();
+			
 		}
 	}
 }

@@ -20,3 +20,10 @@ Password: RCi88@8i
 Capacity: 500
 Alternate email: null
 ********
+Firstname: era
+Lastname: rea
+Email: era.rea@back-end developer.sat.com
+Password: sdb
+Capacity: 500
+Alternate email: null
+********
