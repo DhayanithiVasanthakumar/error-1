@@ -1,4 +1,4 @@
-package com.rentalApp;
+package com.project.rentalApp;
 
 public class Entry {
 
