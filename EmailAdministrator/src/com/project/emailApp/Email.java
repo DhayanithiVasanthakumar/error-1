@@ -1,4 +1,4 @@
-package com.emailapp;
+package com.project.emailApp;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
