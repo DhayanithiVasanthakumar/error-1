@@ -1,4 +1,4 @@
-package com.studentDatabaseApp;
+package com.project.studentDatabaseApp;
 
 import java.util.Scanner;
 
