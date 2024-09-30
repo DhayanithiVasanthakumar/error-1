@@ -27,6 +27,7 @@ public class Main {
 		
 		
 		
+		
 		System.out.print("Enter ATM number: ");
 		int atmNumber=input.nextInt();
 		
