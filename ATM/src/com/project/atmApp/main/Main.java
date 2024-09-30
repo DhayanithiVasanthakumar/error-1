@@ -33,6 +33,7 @@ public class Main {
 		
 		if((atmNumber==atmNum)&&(atmPin==pin)) {
 			
+			
 			while(true) {
 				System.out.println("1.Available Balance\n2.Withdraw Amount\n3.deposit Amount\n4.Mini Statement\n5.Exit from application");
 				
