@@ -166,14 +166,14 @@ public class User {
 						}
 					}
 					
-				
-				
 				break;
 			case 6:
 				System.out.println("Thankyou for using application");
 				System.exit(0);
+				break;
 			default:
 				System.out.println("invalid choice");
+				break;
 			}
 		}
 	}
