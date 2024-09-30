@@ -16,7 +16,9 @@ public class Student {
 		
 	}
 	
-	
+	/*
+	 * parameterized constructor
+	 */
 	public Student(int rollNum,String name,String collegeName,String city,double percentage) {
 		this.rollNumber=rollNum;
 		this.name=name;
