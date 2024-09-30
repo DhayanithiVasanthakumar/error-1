@@ -19,6 +19,7 @@ public class Main {
 		int atmNum=12345;
 		int pin=123;
 		
+		
 		Scanner input=new Scanner(System.in);
 		
 		System.out.println("Welcome to ATM mechine");
