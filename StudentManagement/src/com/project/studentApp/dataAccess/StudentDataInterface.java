@@ -13,6 +13,7 @@ public interface StudentDataInterface {
 	//for percentage
 	public boolean update(int roll,Double update,int ch,Student s);
 	
+	
 	public void showAllStudents();
 	public boolean showStudentByID(int roll);
 }
