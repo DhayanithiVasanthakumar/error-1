@@ -16,6 +16,7 @@ public class User {
 		
 		
 		
+		
 		Scanner input=new Scanner(System.in);
 		System.out.println("Welcome to student Management application system");
 
