@@ -1,6 +1,7 @@
 package com.project.studentApp.dataAccess;
 
 import java.sql.Connection;
+import java.sql.DatabaseMetaData;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
@@ -83,13 +84,19 @@ public class StudentData implements StudentDataInterface{
 		return flag;
 	}
 
+	
+	
 	@Override
-	public boolean update(int roll, String updateName, int ch, Student s) {
+	public boolean update(int roll, String update, int ch, Student s) {
 		
 		int choice=ch;
 		boolean flag=false;
 		
 		try {
+			
+			/*
+			 * update name
+			 */
 			if(choice==1) {
 				Connection con=DataBaseConnection.createConnetion();
 				
@@ -97,7 +104,79 @@ public class StudentData implements StudentDataInterface{
 				
 				PreparedStatement pst=con.prepareStatement(query);
 				
-				pst.setString(1, updateName);
+				pst.setString(1, update);
+				pst.setInt(2, roll);
+				pst.executeUpdate();
+				
+				flag=true;
+			}
+			
+			/*
+			 * update colegename 
+			 */
+			if(choice==2) {
+				Connection con=DataBaseConnection.createConnetion();
+				
+				String query="UPDATE student_details SET collegeName=? WHERE rollNum=?";
+				
+				PreparedStatement pst=con.prepareStatement(query);
+				
+				pst.setString(1, update);
+				pst.setInt(2, roll);
+				pst.executeUpdate();
+				
+				flag=true;
+			}
+			
+			
+			/*
+			 * update cityname 
+			 */
+			if(choice==3) {
+				Connection con=DataBaseConnection.createConnetion();
+				
+				String query="UPDATE student_details SET city=? WHERE rollNum=?";
+				
+				PreparedStatement pst=con.prepareStatement(query);
+				
+				pst.setString(1, update);
+				pst.setInt(2, roll);
+				pst.executeUpdate();
+				
+				flag=true;
+			}
+			
+			
+		
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		return flag;
+	}
+	
+	
+	
+	@Override
+	public boolean update(int roll, Double update, int ch, Student s) {
+		
+		/*
+		 * update percentage 
+		 */
+		int choice=ch;
+		boolean flag=false;
+		try {
+			if(choice==4) {
+				Connection con=DataBaseConnection.createConnetion();
+				
+				String query="UPDATE student_details SET Percentage=? WHERE rollNum=?";
+				
+				PreparedStatement pst=con.prepareStatement(query);
+				
+				pst.setDouble(1, update);
 				pst.setInt(2, roll);
 				pst.executeUpdate();
 				
@@ -107,14 +186,9 @@ public class StudentData implements StudentDataInterface{
 			e.printStackTrace();
 		}
 		
-		
-			
-		
-		
-		
-		
 		return flag;
 	}
+	
 
 	@Override
 	public void showAllStudents() {
